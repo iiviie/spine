@@ -31,13 +31,13 @@ if (typeof window !== 'undefined') {
   // Create the modal
   appKit = createAppKit({
     adapters: [wagmiAdapter],
-    networks,
+    networks: networks as any,
     metadata,
     projectId,
     features: {
       analytics: true,
-      email: true,
-      socials: ['google', 'twitter']
+      email: false,
+      socials: [] // Empty array to disable all social logins including Google
     }
   });
 
