@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
+from fastapi import APIRouter, HTTPException, Depends
+from pydantic import BaseModel
 from typing import Optional
 from .wallet import generate_nonce, verify_wallet_ownership, verify_auth_token
 
