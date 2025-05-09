@@ -6,6 +6,10 @@ const nextConfig = {
       'bufferutil': 'commonjs bufferutil',
       'pino-pretty': 'commonjs pino-pretty',
     });
+    config.module.rules.push({
+      test: /\.json$/,
+      type: 'json',
+    });
     return config;
   },
   transpilePackages: [
